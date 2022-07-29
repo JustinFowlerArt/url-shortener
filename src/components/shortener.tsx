@@ -1,15 +1,27 @@
 import { useState } from 'react';
-import { UrlList } from './urlList';
+import { useFetch } from '../hooks/useFetch';
+import { ShortenedUrl } from './shortenedUrl';
 
 export const Shortener = () => {
 	const [url, setUrl] = useState('');
+	const [validateInput, setValidateInput] = useState('');
+
+	const { data, error, getData } = useFetch(url, { immediate: false });
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		if (validateInput) {
+			setValidateInput('');
+		}
 		setUrl(e.target.value);
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		if (!url) {
+			setValidateInput('Please add a link');
+			return;
+		}
+		await getData();
 	};
 
 	return (
@@ -23,16 +35,26 @@ export const Shortener = () => {
 					type='text'
 					value={url}
 					onChange={e => handleChange(e)}
-					className='rounded-md p-3'
+					className={`rounded-md p-3 ${
+						error &&
+						'text-secondary-red placeholder-secondary-red outline outline-secondary-red'
+					}`}
 					placeholder='Shorten a link here...'
 				/>
+				{(error || validateInput) && (
+					<h3 className='text-secondary-red text-xs text-left italic'>
+						{validateInput ? validateInput : error?.error}
+					</h3>
+				)}
 				<button className='bg-primary-cyan rounded-md p-3 text-white'>
 					Shorten It!
 				</button>
 			</form>
-            <div className='spacey-6 text-left'>
-                <UrlList />
-            </div>
+			<div className='space-y-6 text-left'>
+				{data?.map(url => (
+					<ShortenedUrl key={url.result.code} url={url}/>
+				))}
+			</div>
 		</div>
 	);
 };

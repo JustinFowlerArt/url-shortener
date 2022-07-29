@@ -13,12 +13,12 @@ export const Header = () => {
 				></i>
 				{open && (
 					<div className='flex flex-col items-center absolute z-10 top-24 left-1/2 -translate-x-1/2 w-[90%] py-10 bg-dark-violet text-white font-bold text-lg rounded-lg space-y-6'>
-						<a>Features</a>
-						<a>Pricing</a>
-						<a>Resources</a>
+						<a href='#'>Features</a>
+						<a href='#'>Pricing</a>
+						<a href='#'>Resources</a>
 						<hr className='w-5/6 h-0.5 opacity-25'></hr>
-						<a>Login</a>
-						<a className='rounded-full bg-primary-cyan py-3 w-5/6 mx-6 text-center'>Sign Up</a>
+						<a href='#'>Login</a>
+						<a href='#' className='rounded-full bg-primary-cyan py-3 w-5/6 mx-6 text-center'>Sign Up</a>
 					</div>
 				)}
 			</nav>
