@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    html {
+        font-family: Poppins, system-ui, sans-serif;
+    }
+    
+    .icon-white {
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(136deg) brightness(200%) contrast(100%);
+    }
+}
