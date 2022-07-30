@@ -1,27 +1,22 @@
 import { useState } from 'react';
+import { NavMenu } from './navMenu';
 
 export const Header = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<header className='relative flex justify-between px-6 pt-9'>
-			<img src='/images/logo.svg'></img>
-			<nav className=''>
+		<header className='relative flex items-center justify-between px-6 pt-9 lg:justify-start lg:max-w-4xl xl:max-w-6xl mx-auto'>
+			<img className='flex-none h-8' src='/images/logo.svg'></img>
+			<nav className='lg:hidden'>
 				<i
-					className='fa-solid fa-bars text-gray-violet text-2xl lg:hidden'
+					className='fa-solid fa-bars text-gray-violet text-2xl'
 					onClick={() => setOpen(!open)}
 				></i>
-				{open && (
-					<div className='flex flex-col items-center absolute z-10 top-24 left-1/2 -translate-x-1/2 w-[90%] py-10 bg-dark-violet text-white font-bold text-lg rounded-lg space-y-6'>
-						<a href='#'>Features</a>
-						<a href='#'>Pricing</a>
-						<a href='#'>Resources</a>
-						<hr className='w-5/6 h-0.5 opacity-25'></hr>
-						<a href='#'>Login</a>
-						<a href='#' className='rounded-full bg-primary-cyan py-3 w-5/6 mx-6 text-center'>Sign Up</a>
-					</div>
-				)}
+				{open && <NavMenu mobile={true}/>}
 			</nav>
+            <nav className='hidden lg:block w-full'>
+                <NavMenu mobile={false}/>
+            </nav>
 		</header>
 	);
 };

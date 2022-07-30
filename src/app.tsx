@@ -6,8 +6,11 @@ import { Shortener } from './components/shortener';
 import { Statistics } from './components/statistics';
 
 export const App = () => {
+	/*
+    TODO: Replace background images on desktop vs mobile
+    */
 	return (
-		<div className=''>
+		<div className='overflow-clip'>
 			<Header />
 			<main className='relative text-center space-y-6'>
 				<CallToAction />
@@ -15,7 +18,7 @@ export const App = () => {
 				<div className='bg-off-white'>
 					<Shortener />
 					<Statistics />
-                    <Boost />
+					<Boost />
 				</div>
 			</main>
 			<Footer />

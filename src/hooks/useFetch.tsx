@@ -1,38 +1,41 @@
 import { useCallback, useEffect, useState } from 'react';
-import { iUrl, iError } from '../components/interfaces';
 
-export const useFetch = (
+export const useFetch = <T,E>(
 	url: string,
-	immediate: {
+	{
+		immediate,
+	}: {
 		immediate: boolean;
 	}
 ) => {
-	const [data, setData] = useState<iUrl[]>([]);
-	const [error, setError] = useState<iError | null>(null);
-
-	const baseUrl = 'https://api.shrtco.de/v2/';
+	const [data, setData] = useState<T | null>(null);
+	const [error, setError] = useState<E | null>(null);
+    const [loading, setLoading] = useState(false)
 
 	const getData = useCallback(async () => {
 		setError(null);
+        setLoading(true)
 		try {
-			const response = await fetch(baseUrl + 'shorten?url=' + url);
+			const response = await fetch(url);
 			if (response.ok) {
 				const json = await response.json();
-				setData([...data, json]);
+				setData(json);
 			} else {
 				const json = await response.json();
 				throw json;
 			}
 		} catch (error) {
-			setError(error as iError);
-		}
-	}, [url, data]);
+			setError(error as E);
+		} finally {
+            setLoading(false)
+        }
+	}, [url]);
 
 	useEffect(() => {
-		if (immediate.immediate) {
+		if (immediate) {
 			getData();
 		}
 	}, [getData, immediate]);
 
-	return { data, error, getData };
+	return { data, error, loading, getData };
 };

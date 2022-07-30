@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
@@ -7,7 +9,7 @@ module.exports = {
 				'dark-violet': 'hsl(257, 27%, 26%)',
 				'secondary-red': 'hsl(0, 87%, 67%)',
 				'neutral-gray': 'hsl(0, 0%, 75%)',
-                'off-white': 'hsl(230, 25%, 95%)',
+				'off-white': 'hsl(230, 25%, 95%)',
 				'gray-violet': 'hsl(257, 7%, 63%)',
 				'very-dark-blue': 'hsl(255, 11%, 22%)',
 				'very-dark-violet': 'hsl(260, 8%, 14%)',
