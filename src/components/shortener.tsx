@@ -50,7 +50,6 @@ export const Shortener = () => {
 		<div className='relative -top-32 py-12 px-6 space-y-6 lg:max-w-4xl xl:max-w-6xl mx-auto'>
 			<form
 				className='bg-dark-violet flex flex-col p-6 rounded-lg bg-no-repeat bg-right-top lg:flex-row lg:items-center lg:p-12 lg:px-16 shorten'
-				style={{ backgroundImage: 'url(/images/bg-shorten-mobile.svg)' }}
 				onSubmit={e => handleSubmit(e)}
 			>
 				<div className='relative w-full mb-4 lg:mb-0'>

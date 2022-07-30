@@ -1,9 +1,9 @@
 export const NavMenu = ({ mobile }: { mobile: boolean }) => {
 	return (
 		<div
-			className={`flex font-bold text-lg items-center ${
+			className={`flex font-bold items-center ${
 				mobile
-					? 'flex-col  absolute z-10 top-24 left-1/2 -translate-x-1/2 w-[90%] space-y-6 py-10 rounded-lg text-white bg-dark-violet'
+					? 'flex-col absolute z-10 top-24 left-1/2 -translate-x-1/2 w-[90%] space-y-6 py-10 rounded-lg text-white bg-dark-violet text-lg'
 					: 'space-x-10 justify-between w-full text-gray-violet pl-10'
 			}`}
 		>

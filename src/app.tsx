@@ -6,9 +6,6 @@ import { Shortener } from './components/shortener';
 import { Statistics } from './components/statistics';
 
 export const App = () => {
-	/*
-    TODO: Replace background images on desktop vs mobile
-    */
 	return (
 		<div className='overflow-clip'>
 			<Header />

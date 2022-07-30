@@ -10,14 +10,22 @@
     .icon-white {
         filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(136deg) brightness(200%) contrast(100%);
     }
-}
-/* 
-.shorten {
-    background: url("./images/bg-shorten-mobile.svg");
-}
 
-@media screen and (min-width: 600px) {
     .shorten {
-        background: url("./images/bg-shorten-desktop.svg");
+        background: url("./img/bg-shorten-mobile.svg");
     }
-} */
+
+    .boost {
+        background: url("./img/bg-boost-mobile.svg");
+    }
+
+    @media screen and (min-width: 640px) {
+        .shorten {
+            background: url("./img/bg-shorten-desktop.svg");
+        }
+
+        .boost {
+            background: url("./img/bg-boost-desktop.svg");
+        }
+    }
+}

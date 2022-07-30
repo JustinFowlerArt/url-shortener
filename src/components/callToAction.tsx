@@ -1,6 +1,6 @@
 export const CallToAction = () => {
 	return (
-		<div className='grid grid-cols-1 px-6 pb-32 space-y-6 lg:text-left lg:max-w-4xl xl:max-w-6xl lg:mx-auto lg:grid-cols-2 lg:items-center lg:pb-24'>
+		<div className='grid grid-cols-1 px-6 pb-32 lg:text-left lg:max-w-4xl xl:max-w-6xl lg:mx-auto lg:grid-cols-2 lg:items-center lg:pb-24'>
 			<img
 				src='/images/illustration-working.svg'
 				className='max-w-[500px] my-8 mx-auto lg:order-2 lg:relative lg:max-w-none lg:pt-8 xl:left-32 '
