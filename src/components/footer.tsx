@@ -51,29 +51,17 @@ export const Footer = () => {
                 </div>
 
                 <div className='flex space-x-6 text-2xl pt-4 lg:pt-2'>
-                    <a href='#'>
-                        <i
-                            className='fa-brands fa-square-facebook text-white text-2xl hover:text-primary-cyan'
-                            aria-label='Facebook'
-                        ></i>
+                    <a href='#' aria-label='Facebook'>
+                        <i className='fa-brands fa-square-facebook text-white text-2xl hover:text-primary-cyan' />
                     </a>
-                    <a href='#'>
-                        <i
-                            className='fa-brands fa-twitter text-white text-2xl hover:text-primary-cyan'
-                            aria-label='Twitter'
-                        ></i>
+                    <a href='#' aria-label='Twitter'>
+                        <i className='fa-brands fa-twitter text-white text-2xl hover:text-primary-cyan' />
                     </a>
-                    <a href='#'>
-                        <i
-                            className='fa-brands fa-pinterest text-white text-2xl hover:text-primary-cyan'
-                            aria-label='Pinterest'
-                        ></i>
+                    <a href='#' aria-label='Pinterest'>
+                        <i className='fa-brands fa-pinterest text-white text-2xl hover:text-primary-cyan' />
                     </a>
-                    <a href='#'>
-                        <i
-                            className='fa-brands fa-instagram text-white text-2xl hover:text-primary-cyan'
-                            aria-label='Instagram'
-                        ></i>
+                    <a href='#' aria-label='Instagram'>
+                        <i className='fa-brands fa-instagram text-white text-2xl hover:text-primary-cyan' />
                     </a>
                 </div>
             </div>
