@@ -7,6 +7,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -31,6 +32,9 @@ Users should be able to:
 
 ![](./design/final-mobile.png)
 ![](./design/final-desktop.png)
+
+- [Solution URL](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G/hub/url-shortener-with-react-typescript-tailwind-and-fetch-TH2nsVosxs)
+- [Live Site URL](https://url-shortener.justinfowlerart.com/)
 
 ## My process
 

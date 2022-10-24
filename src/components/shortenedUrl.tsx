@@ -18,9 +18,9 @@ export const ShortenedUrl = ({ url }: Props) => {
 
 	return (
 		<div className='bg-white text-sm rounded-lg lg:flex lg:justify-between lg:text-lg lg:items-center'>
-			<h3 className='p-4 border-b lg:border-b-0 lg:px-6'>{url.result.original_link}</h3>
+			<p className='p-4 border-b lg:border-b-0 lg:px-6'>{url.result.original_link}</p>
 			<div className='p-4 lg:flex lg:items-center lg:space-x-6 lg:px-6'>
-				<h3 className='text-primary-cyan mb-3 lg:mb-0'>{url.result.full_short_link}</h3>
+				<p className='text-primary-cyan mb-3 lg:mb-0'>{url.result.full_short_link}</p>
 				<button
 					className='rounded-md bg-primary-cyan py-2 w-full text-white font-bold lg:w-32 focus:bg-dark-violet hover:brightness-110'
 					onClick={() => handleClick()}

@@ -17,6 +17,7 @@ export const Statistics = () => {
 						<img
 							className='scale-90'
 							src='/images/icon-brand-recognition.svg'
+							alt='Brand Recognition'
 						></img>
 					</div>
 					<h3 className='text-very-dark-violet text-lg font-bold -mt-3 mb-3 lg:-mt-8 lg:text-xl'>
@@ -33,6 +34,7 @@ export const Statistics = () => {
 						<img
 							className='scale-90'
 							src='/images/icon-detailed-records.svg'
+							alt='Detailed Records'
 						></img>
 					</div>
 					<h3 className='text-very-dark-violet text-lg font-bold -mt-3 mb-3 lg:-mt-8 lg:text-xl'>
@@ -49,6 +51,7 @@ export const Statistics = () => {
 						<img
 							className='scale-90'
 							src='/images/icon-fully-customizable.svg'
+							alt='Fully Customizable'
 						></img>
 					</div>
 					<h3 className='text-very-dark-violet text-lg font-bold -mt-3 mb-3 lg:-mt-8 lg:text-xl'>
